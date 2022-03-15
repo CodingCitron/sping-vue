@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.fixed{
+    position: fixed;
+}
+
+body{
+    font-size: 14px;
+}
+
+.text-shadow{
+    text-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+}
