@@ -5,3 +5,8 @@ spring:
   mvc:
     view:
       suffix: .html
+
+jwt:
+  header: Authorization
+  secret: 67CV7IOB66+8MTk5MjEyMTdKV1TthqDtgbAg6rWs7ZiE7ZWY64ukLg== #시크릿 키는 256 bits (32 byte) 바꿔야함
+  token-validity-in-seconds: 86400
