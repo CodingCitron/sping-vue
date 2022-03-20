@@ -1,8 +1,7 @@
 import axios from './index'
 
-function registerUser() {
-    console.log(axios)
-    axios.post()
+function registerUser(userData) {
+    return axios.post('/api/signup', userData)
 }
 
 export { registerUser }

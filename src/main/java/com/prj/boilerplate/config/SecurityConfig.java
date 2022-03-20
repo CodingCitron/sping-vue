@@ -39,6 +39,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
  
     @Override
     public void configure(WebSecurity web) {
+    	/* 이 부분 필요 없음
         web
                 .ignoring()
                 .antMatchers(
@@ -49,6 +50,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 		"/img/**",
                         "/favicon.ico"
                 );
+                */ 
     }
 	
 	@Override
@@ -69,14 +71,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
          .and()
          .sessionManagement() 
          .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-
+         
+         /*
+          * spa 에서는 프론트엔드 부분에서 자바스크립트로 처리한다.
+          
          .and()
          .authorizeRequests() //토큰이 없는 요청은 허용한다. 메인페이지, 로그인, 회원가입
-         .antMatchers("/", "/index").permitAll()
-         .antMatchers("/api/authenticate").permitAll() 
-         .antMatchers("/api/signup").permitAll()
+         .antMatchers("/**").permitAll()
          .anyRequest().authenticated()
-
+          */
          .and()
          .apply(new JwtSecurityConfig(tokenProvider)); // jwtFilter를 등록한다.
 	}

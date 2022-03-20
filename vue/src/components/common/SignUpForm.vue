@@ -9,7 +9,7 @@
             <input type="password" id="password" v-model="password" />
         </div>
         <div>
-            <label for="checkPassword">password</label>
+            <label for="checkPassword">checkPassword</label>
             <input type="password" id="checkPassword" v-model="checkPassword" />
         </div>
         <div>
@@ -33,7 +33,17 @@ export default {
             checkPassword = ref(''),
             nickname = ref('')
 
-        const onSubmit = () => {}
+        const onSubmit = () => {
+            const userData = {
+                username: username.value,
+                password: password.value,
+                nickname: nickname.value,
+            }
+
+            registerUser(userData).then(result => {
+                console.log(result.data)
+            })
+        }
 
         return {
             username,
