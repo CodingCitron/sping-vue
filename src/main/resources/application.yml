@@ -5,6 +5,11 @@ spring:
   mvc:
     view:
       suffix: .html
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/spring_vue_boilerplate
+    username: sangmin
+    password: 123456
 
 jwt:
   header: Authorization
