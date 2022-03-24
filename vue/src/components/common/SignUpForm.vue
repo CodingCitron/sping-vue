@@ -31,18 +31,26 @@ export default {
         const username = ref(''),
             password = ref(''),
             checkPassword = ref(''),
-            nickname = ref('')
+            nickname = ref(''),
+            logMessage = ref('')
 
-        const onSubmit = () => {
+        const onSubmit = async () => {
             const userData = {
                 username: username.value,
                 password: password.value,
                 nickname: nickname.value,
             }
 
-            registerUser(userData).then(result => {
-                console.log(result.data)
-            })
+            const { data } = await registerUser(userData)
+            console.log(data)
+            initForm()
+        }
+
+        const initForm = () => {
+            username.value = ''
+            password.value = ''
+            checkPassword.value = ''
+            nickname.value = ''
         }
 
         return {
