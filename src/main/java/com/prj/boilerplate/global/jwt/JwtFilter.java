@@ -1,4 +1,4 @@
-package com.prj.boilerplate.jwt;
+package com.prj.boilerplate.global.jwt;
 
 import java.io.IOException;
 

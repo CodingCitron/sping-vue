@@ -1,4 +1,4 @@
-package com.prj.boilerplate.jwt;
+package com.prj.boilerplate.global.jwt;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;

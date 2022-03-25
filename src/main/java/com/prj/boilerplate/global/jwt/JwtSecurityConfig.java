@@ -1,4 +1,4 @@
-package com.prj.boilerplate.jwt;
+package com.prj.boilerplate.global.jwt;
 
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

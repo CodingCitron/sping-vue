@@ -1,4 +1,4 @@
-package com.prj.boilerplate.config;
+package com.prj.boilerplate.global.config;
 
 import java.io.IOException;
 

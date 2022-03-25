@@ -1,4 +1,4 @@
-package com.prj.boilerplate.config;
+package com.prj.boilerplate.global.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,10 +10,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.prj.boilerplate.jwt.JwtAccessDeniedHandler;
-import com.prj.boilerplate.jwt.JwtAuthenticationEntryPoint;
-import com.prj.boilerplate.jwt.JwtSecurityConfig;
-import com.prj.boilerplate.jwt.TokenProvider;
+import com.prj.boilerplate.global.jwt.*;
 
 @Configuration
 @EnableWebSecurity
